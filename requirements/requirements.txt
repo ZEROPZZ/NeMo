@@ -14,7 +14,7 @@ torch
 tqdm>=4.41.0
 wget
 wrapt
-transformer-engine @ git+https://github.com/NVIDIA/TransformerEngine.git@${TE_TAG}"
+transformer-engine @ git+https://github.com/NVIDIA/TransformerEngine.git@${TE_TAG}
 nvidia-modelopt[torch]~=${MODELOPT_VERSION}
 unstructured==0.14.9
 llama-index==0.10.43
