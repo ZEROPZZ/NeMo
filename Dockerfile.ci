@@ -49,11 +49,6 @@ RUN \
 # pip install "apex @ git+https://github.com/NVIDIA/apex.git@${APEX_TAG}"
   
 pip install --no-cache-dir --extra-index-url https://pypi.nvidia.com \
-"transformer-engine @ git+https://github.com/NVIDIA/TransformerEngine.git@${TE_TAG}" \
-"nvidia-modelopt[torch]~=${MODELOPT_VERSION}" \
-"unstructured==0.14.9" \
-"llama-index==0.10.43" \
-"onnxscript @ git+https://github.com/microsoft/onnxscript" \
 -r tools/ctc_segmentation/requirements.txt \
 ".[all]"
 
