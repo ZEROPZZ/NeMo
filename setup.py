@@ -59,7 +59,12 @@ def req_file(filename, folder="requirements"):
         content = f.readlines()
     # you may also want to remove whitespace characters
     # Example: `\n` at the end of each line
-    return [x.strip() for x in content]
+    requirements = [x.strip() for x in content]
+    requirements = [
+        os.path.expandvars(line.strip()) for line in requirements if line.strip() and not line.startswith("#")
+    ]
+
+    return requirements
 
 
 install_requires = req_file("requirements.txt")

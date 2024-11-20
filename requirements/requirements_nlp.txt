@@ -12,7 +12,7 @@ jieba
 mamba_ssm @ git+https://github.com/state-spaces/mamba.git@v2.2.2
 markdown2
 matplotlib>=3.3.2
-megatron_core @ git+https://github.com/NVIDIA/Megatron-LM.git@c1728c12f1f1cdbb786e52f1ffe512295d76bef3
+megatron_core @ git+https://github.com/NVIDIA/Megatron-LM.git@${MCORE_TAG}
 nltk>=3.6.5
 numpy<2  # tensorstore has an implicit compiled dependency on numpy<2
 opencc
