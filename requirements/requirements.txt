@@ -1,4 +1,4 @@
---no-build-isolation apex @ git+https://github.com/NVIDIA/apex.git@${APEX_TAG}
+apex @ git+https://github.com/NVIDIA/apex.git@${APEX_TAG} --no-build-isolation 
 hatchling 
 huggingface_hub>=0.24
 llama-index==0.10.43
