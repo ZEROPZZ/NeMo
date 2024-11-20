@@ -46,6 +46,9 @@ RUN \
   --mount=type=bind,source=setup.py,target=setup.py \
   --mount=type=bind,source=nemo/package_info.py,target=nemo/package_info.py \
   --mount=type=bind,source=nemo/__init__.py,target=nemo/__init__.py <<"EOF" bash -ex    
+
+export NEMO_RUN_TAG
+
 pip install --no-cache-dir --no-build-isolation --extra-index-url https://pypi.nvidia.com \
 "transformer-engine @ git+https://github.com/NVIDIA/TransformerEngine.git@${TE_TAG}" \
 "nvidia-modelopt[torch]~=${MODELOPT_VERSION}" \
