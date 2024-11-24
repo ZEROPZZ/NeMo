@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chat Dialog</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2>AI Chat Dialog</h2>
-        </div>
-        <div class="chat-body">
-            <div class="chat-messages">
-                <!-- Messages will be rendered here -->
-            </div>
-            <form id="chat-form">
-                <input type="text" id="chat-input" placeholder="Type a message...">
-                <button id="send-button">Send</button>
-            </form>
-        </div>
-    </div>
+将渐变导入为 gr
+随机导入
+进口时间
 
-    <script src="script.js"></script>
-</body>
-</html>
+以 gr.Blocks() 作为演示:
+    聊天机器人 = gr.Chatbot(type="messages")
+    msg = gr.文本框()
+    清除 = gr.Button("清除")
+
+    def user(user_message, 历史记录: 列表):
+        return "", 历史记录 + [{"角色": "用户", "内容": user_message}]
+
+    def bot（历史：列表):
+        bot_message = random.choice(["你好吗？", "我爱你", "我很饿"])
+        History.append({"角色": "助理", "内容": ""})
+        对于 bot_message 中的字符:
+            历史[-1]['内容'] += 字符
+            睡眠时间(0.05)
+            产量历史记录
+
+    msg.submit(用户, [msg, 聊天机器人], [msg, 聊天机器人], 队列=False).then(
+        机器人、聊天机器人、聊天机器人
+    )
+    clear.click（lambda：无，无，聊天机器人，队列= False)
+
+如果 __name__ == "__main__":
+    演示启动()
